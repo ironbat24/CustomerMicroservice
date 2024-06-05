@@ -10,7 +10,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class Customer {
@@ -26,5 +25,22 @@ public class Customer {
 	String email;
 	String phone;
 	float balance;
+	
+	public Customer(Long acc_no, String name, String username, String password, int age, String sSN, String address,
+			String email, String phone, float balance) {
+		super();
+		this.acc_no = acc_no;
+		this.name = name;
+		this.username = username;
+		this.password = password;
+		this.age = age;
+		SSN = sSN;
+		this.address = address;
+		this.email = email;
+		this.phone = phone;
+		this.balance = balance;
+	}
+	
+	
 
 }

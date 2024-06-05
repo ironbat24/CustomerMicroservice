@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -22,6 +22,12 @@ public class CustomerController {
 	
 	@Autowired
 	CustomerService cs;
+	
+	@GetMapping("/readall")
+	public ArrayList<Customer> readAll() {
+		ArrayList<Customer> customers = (ArrayList<Customer>) cs.read();
+		return customers;
+	}
 	
 	@PostMapping("/add")
 	public void add(@RequestBody Customer cust) {

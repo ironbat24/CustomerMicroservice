@@ -8,6 +8,8 @@ import com.example.model.Customer;
 
 public interface CustomerService {
 	
+	public List<Customer> read();
+	
 	public Customer logindetails(String username, String password);
 	
 	public void add(Customer customer);
